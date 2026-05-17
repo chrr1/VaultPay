@@ -75,7 +75,7 @@
     }
 
     .home-user-name {
-        @apply ml-4 text-2xl font-sans-bold text-primary;
+        @apply mr-18 text-2xl font-sans-bold text-primary;
     }
 
     .home-add-icon {
