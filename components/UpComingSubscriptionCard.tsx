@@ -15,13 +15,14 @@ const UpComingSubscriptionCard = ({data:{name,price,daysleft,icon,currency}}:
                 {daysleft > 1 ? `${daysleft} days left` : "Last day"}
             </Text>
 
-            <Text className="upcoming-name" numberOfLines={1}>
-                {name}
-            </Text>
+            
         </View>
       </View>
+      <Text className="upcoming-name" numberOfLines={1}>
+                {name}
+            </Text>
     </View>
-  )
+  ) 
 }
 
 export default UpComingSubscriptionCard

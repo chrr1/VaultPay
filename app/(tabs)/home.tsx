@@ -3,12 +3,13 @@ import { Text, View, Image, FlatList } from "react-native";
 import { styled } from "nativewind"
 import images from "@/constants/images"
 import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
-import { HOME_BALANCE, HOME_USER, UPCOMING_SUBSCRIPTIONS } from "@/constants/data";
+import { HOME_BALANCE, HOME_SUBSCRIPTIONS, HOME_USER, UPCOMING_SUBSCRIPTIONS } from "@/constants/data";
 import { icons } from "@/constants/icons";
 import { formatCurrency } from "@/lib/utils";
 import dayjs from "dayjs";
 import ListHeading from "@/components/ListHeading";
 import UpComingSubscriptionCard from "@/components/UpComingSubscriptionCard";
+import SubscriptionCard from "@/components/SubscriptionCard";
 
 const SafeAreaView = styled(RNSafeAreaView)
 export default function App() {
@@ -49,6 +50,7 @@ export default function App() {
 
     <View>
         <ListHeading title="All Subscription "/>
+        <SubscriptionCard {...HOME_SUBSCRIPTIONS[0]}  />
       </View>
 
     </SafeAreaView>

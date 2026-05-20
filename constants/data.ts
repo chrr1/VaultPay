@@ -1,4 +1,4 @@
-import {icons} from './icons'
+import { icons } from './icons';
 
 export const tabs: AppTab[] = [
     {name:'home', title:'Home', icon: icons.home},
@@ -28,7 +28,7 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     startDate: "2023-11-03T09:00:00.000Z",
     price: 10.99,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-03T09:00:00.000Z"
 },
 {
@@ -42,7 +42,7 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     startDate: "2023-06-20T09:00:00.000Z",
     price: 10.00,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-20T09:00:00.000Z"
 },
 {
@@ -56,7 +56,7 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     startDate: "2023-06-20T09:00:00.000Z",
     price: 10.00,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-20T09:00:00.000Z"
 },
 {
@@ -70,7 +70,7 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     startDate: "2023-04-12T09:00:00.000Z",
     price: 11.99,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-12T09:00:00.000Z"
 },
 
@@ -86,7 +86,7 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     startDate: "2023-07-08T09:00:00.000Z",
     price: 5.00,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-08T09:00:00.000Z"
 },
 {
@@ -100,7 +100,7 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     startDate: "2023-08-14T09:00:00.000Z",
     price: 10.00,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-14T09:00:00.000Z"
 },
 {
@@ -114,7 +114,7 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     startDate: "2023-09-01T09:00:00.000Z",
     price: 20.00,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-01T09:00:00.000Z"
 },
 {
@@ -128,7 +128,7 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     startDate: "2023-10-11T09:00:00.000Z",
     price: 8.99,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-11T09:00:00.000Z"
 },
 
@@ -146,7 +146,7 @@ export const HOME_SUBSCRIPTIONS: Subscription[] = [
     startDate: "2023-01-15T09:00:00.000Z",
     price: 77.89,
     currency : "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-15T09:00:00.000Z"
 },
 {
@@ -160,7 +160,7 @@ export const HOME_SUBSCRIPTIONS: Subscription[] = [
     startDate: "2023-02-10T09:00:00.000Z",
     price: 12.99,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-10T09:00:00.000Z"
 },
 {
@@ -174,7 +174,7 @@ export const HOME_SUBSCRIPTIONS: Subscription[] = [
     startDate: "2023-03-05T09:00:00.000Z",
     price: 20.00,
     currency: "USD",
-    billing: "monthly",
+    billing: "Monthly",
     renewalDate: "2024-07-05T09:00:00.000Z"
 },
 ]
