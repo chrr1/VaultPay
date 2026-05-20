@@ -13,38 +13,23 @@ export const HOME_USER ={
 
 export const HOME_BALANCE = {
     amount: 2489.48,
-    nextRenewalDate:"2026-03-18T09:00:00.000Z"
+    nextRenewalDate:"2026-03-19T09:00:00.000Z"
 };
 
 export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
-   
-{
-    id: "dropbox-plus",
-    icon: icons.dropbox,
-    name: "Dropbox",
-    plan: "Dropbox Plus",
-    category: "Storage",
-    paymentMethod: "Visa ending in 4321",
+   {
+    id: "spotify-premium",
+    icon: icons.spotify,
+    name: "Spotify",
+    plan: "Premium Individual",
+    category: "Music",
+    paymentMethod: "Visa ending in 7788",
     status: "active",
-    startDate: "2023-04-12T09:00:00.000Z",
-    price: 11.99,
+    startDate: "2023-11-03T09:00:00.000Z",
+    price: 10.99,
     currency: "USD",
     billing: "monthly",
-    renewalDate: "2024-07-12T09:00:00.000Z"
-},
-{
-    id: "figma-professional",
-    icon: icons.figma,
-    name: "Figma",
-    plan: "Professional Plan",
-    category: "Design",
-    paymentMethod: "Visa ending in 7890",
-    status: "active",
-    startDate: "2023-05-01T09:00:00.000Z",
-    price: 15.00,
-    currency: "USD",
-    billing: "monthly",
-    renewalDate: "2024-07-01T09:00:00.000Z"
+    renewalDate: "2024-07-03T09:00:00.000Z"
 },
 {
     id: "github-pro",
@@ -60,6 +45,36 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     billing: "monthly",
     renewalDate: "2024-07-20T09:00:00.000Z"
 },
+{
+    id: "figma-professional",
+    icon: icons.figma,
+    name: "Figma",
+    plan: "Professional Plan",
+    category: "Design",
+    paymentMethod: "Visa ending in 7890",
+    status: "active",
+    startDate: "2023-06-20T09:00:00.000Z",
+    price: 10.00,
+    currency: "USD",
+    billing: "monthly",
+    renewalDate: "2024-07-20T09:00:00.000Z"
+},
+{
+    id: "dropbox-plus",
+    icon: icons.dropbox,
+    name: "Dropbox",
+    plan: "Dropbox Plus",
+    category: "Storage",
+    paymentMethod: "Visa ending in 4321",
+    status: "active",
+    startDate: "2023-04-12T09:00:00.000Z",
+    price: 11.99,
+    currency: "USD",
+    billing: "monthly",
+    renewalDate: "2024-07-12T09:00:00.000Z"
+},
+
+
 {
     id: "medium-member",
     icon: icons.medium,
@@ -116,20 +131,7 @@ export const UPCOMING_SUBSCRIPTIONS  : UpComingSubscription[] = [
     billing: "monthly",
     renewalDate: "2024-07-11T09:00:00.000Z"
 },
-{
-    id: "spotify-premium",
-    icon: icons.spotify,
-    name: "Spotify",
-    plan: "Premium Individual",
-    category: "Music",
-    paymentMethod: "Visa ending in 7788",
-    status: "active",
-    startDate: "2023-11-03T09:00:00.000Z",
-    price: 10.99,
-    currency: "USD",
-    billing: "monthly",
-    renewalDate: "2024-07-03T09:00:00.000Z"
-},
+
 ];
 
 export const HOME_SUBSCRIPTIONS: Subscription[] = [
