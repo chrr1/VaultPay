@@ -1,6 +1,7 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
-import { formatCurrency } from '@/lib/utils'
+import { View, Text, Image, Pressable } from 'react-native'
+import { formatCurrency, formatSubscriptionDateTime } from '@/lib/utils'
+import clsx from 'clsx'
 
 const SubscriptionCard = ({
     name,
@@ -8,10 +9,16 @@ const SubscriptionCard = ({
     currency,
     icon,
     billing,
+    color,
+    category,
+    plan,
+    renewalDate,
+    expanded,
+    onPress
 }: SubscriptionCardProps) => {
 
     return (
-        <View className="sub-card bg-card">
+        <Pressable onPress={onPress} className={clsx('sub-card', expanded ? 'sub-card-expanded' : 'bg-card')} style={!expanded && color ? {backgroundColor: color} :undefined}>
 
             <View className="sub-head">
 
@@ -28,6 +35,9 @@ const SubscriptionCard = ({
                             className="sub-title"
                         >
                             {name}
+                        </Text>
+                        <Text numberOfLines={1} ellipsizeMode="tail" className="sub-meta">
+                            {category ?. trim() || plan ?. trim() || (renewalDate ? formatSubscriptionDateTime(renewalDate) : '')}
                         </Text>
                     </View>
 
@@ -47,7 +57,7 @@ const SubscriptionCard = ({
 
             </View>
 
-        </View>
+        </Pressable>
     )
 }
 

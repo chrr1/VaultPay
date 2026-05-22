@@ -10,9 +10,11 @@ import dayjs from "dayjs";
 import ListHeading from "@/components/ListHeading";
 import UpComingSubscriptionCard from "@/components/UpComingSubscriptionCard";
 import SubscriptionCard from "@/components/SubscriptionCard";
+import { useState } from "react";
 
 const SafeAreaView = styled(RNSafeAreaView)
 export default function App() {
+  const [expandedSubscriptionId, setExpandedSubscriptionId] = useState<string | null>(null);
   return (
     <SafeAreaView className="flex-1 bg-background p-5">
       <View className="home-header">
@@ -50,7 +52,11 @@ export default function App() {
 
     <View>
         <ListHeading title="All Subscription "/>
-        <SubscriptionCard {...HOME_SUBSCRIPTIONS[0]}  />
+        <SubscriptionCard 
+        {...HOME_SUBSCRIPTIONS[0]}
+        expanded={expandedSubscriptionId === HOME_SUBSCRIPTIONS[0].id} 
+        onPress={() => setExpandedSubscriptionId((currentId) => (currentId === HOME_SUBSCRIPTIONS[0].id ? null : HOME_SUBSCRIPTIONS[0].id))}
+        />
       </View>
 
     </SafeAreaView>
