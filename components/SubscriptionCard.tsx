@@ -14,12 +14,24 @@ const SubscriptionCard = ({
     plan,
     renewalDate,
     expanded,
-    onPress
+    onPress,
+    paymentMethod
 }: SubscriptionCardProps) => {
 
     return (
-        <Pressable onPress={onPress} className={clsx('sub-card', expanded ? 'sub-card-expanded' : 'bg-card')} style={!expanded && color ? {backgroundColor: color} :undefined}>
+        <Pressable
+            onPress={onPress}
+            className={clsx(
+                'sub-card',
+                expanded ? 'sub-card-expanded' : 'bg-card'
+            )}
+            style={!expanded && color
+                ? { backgroundColor: color }
+                : undefined
+            }
+        >
 
+            {/* HEADER */}
             <View className="sub-head">
 
                 <View className="sub-main">
@@ -30,15 +42,30 @@ const SubscriptionCard = ({
                     />
 
                     <View className="sub-copy">
+
                         <Text
                             numberOfLines={1}
                             className="sub-title"
                         >
                             {name}
                         </Text>
-                        <Text numberOfLines={1} ellipsizeMode="tail" className="sub-meta">
-                            {category ?. trim() || plan ?. trim() || (renewalDate ? formatSubscriptionDateTime(renewalDate) : '')}
+
+                        <Text
+                            numberOfLines={1}
+                            ellipsizeMode="tail"
+                            className="sub-meta"
+                        >
+                            {
+                                category?.trim() ||
+                                plan?.trim() ||
+                                (
+                                    renewalDate
+                                        ? formatSubscriptionDateTime(renewalDate)
+                                        : ''
+                                )
+                            }
                         </Text>
+
                     </View>
 
                 </View>
@@ -56,6 +83,22 @@ const SubscriptionCard = ({
                 </View>
 
             </View>
+
+            {expanded && (
+                <View className="sub-body">
+                    <View className="sub-details">
+                        <View className="sub-row">
+                            <View className="sub-row-copy">
+                                <Text className="sub-label">Payment : </Text>
+                                <Text className="sub-value" numberOfLines={1}
+                                ellipsizeMode="tail">{paymentMethod?.trim()}
+                                </Text>
+                            </View>
+                        </View>
+                    </View>
+
+                </View>
+            )}
 
         </Pressable>
     )
