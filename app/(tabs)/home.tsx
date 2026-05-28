@@ -17,7 +17,11 @@ export default function App() {
   const [expandedSubscriptionId, setExpandedSubscriptionId] = useState<string | null>(null);
   return (
     <SafeAreaView className="flex-1 bg-background p-5">
-      <View className="home-header">
+
+          <FlatList 
+          ListHeaderComponent={() => (
+            <>
+               <View className="home-header">
         <Image source={images.avatar} className="home-avatar" />
         <Text className="home-user-name">{HOME_USER.name}</Text>
         <Image source={icons.add} className="home-add-icon" />
@@ -37,7 +41,7 @@ export default function App() {
         </View>
       </View>
 
-      <View>
+      <View className="mb-5">
         <ListHeading title="Upcoming "/>
         <FlatList 
         data={UPCOMING_SUBSCRIPTIONS}
@@ -50,10 +54,10 @@ export default function App() {
         />      
       </View>
 
-    <View className="flex-1 mt-6">
-        <ListHeading title="All Subscription "/>
-
-          <FlatList data={HOME_SUBSCRIPTIONS}
+      <ListHeading title="All Subscriptions" />
+            </>
+          )}
+          data={HOME_SUBSCRIPTIONS}
             keyExtractor={(item) => item.id}
             renderItem={({item}) => (
               <SubscriptionCard 
@@ -66,9 +70,9 @@ export default function App() {
             ItemSeparatorComponent={() => <View className="h-4" />}
             showsVerticalScrollIndicator={false}
             ListEmptyComponent={<Text className="home-empty-state">No subscriptions yet.</Text>}
-
+            contentContainerStyle={{ paddingBottom: 30 }}
         />
-      </View>
+      
 
     </SafeAreaView>
   );

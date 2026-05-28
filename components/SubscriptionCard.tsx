@@ -15,7 +15,9 @@ const SubscriptionCard = ({
     renewalDate,
     expanded,
     onPress,
-    paymentMethod
+    paymentMethod,
+    startDate,
+    status
 }: SubscriptionCardProps) => {
 
     return (
@@ -92,6 +94,42 @@ const SubscriptionCard = ({
                                 <Text className="sub-label">Payment : </Text>
                                 <Text className="sub-value" numberOfLines={1}
                                 ellipsizeMode="tail">{paymentMethod?.trim()}
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View className="sub-row">
+                            <View className="sub-row-copy">
+                                <Text className="sub-label">Category : </Text>
+                                <Text className="sub-value" numberOfLines={1}
+                                ellipsizeMode="tail">{category?.trim() || plan?.trim()} 
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View className="sub-row">
+                            <View className="sub-row-copy">
+                                <Text className="sub-label">Started : </Text>
+                                <Text className="sub-value" numberOfLines={1}
+                                ellipsizeMode="tail">{startDate ? formatSubscriptionDateTime(startDate) : ''}
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View className="sub-row">
+                            <View className="sub-row-copy">
+                                <Text className="sub-label">Renewal Date : </Text>
+                                <Text className="sub-value" numberOfLines={1}
+                                ellipsizeMode="tail">{renewalDate ? formatSubscriptionDateTime(renewalDate) : ''}
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View className="sub-row">
+                            <View className="sub-row-copy">
+                                <Text className="sub-label">Status : </Text>
+                                <Text className="sub-value" numberOfLines={1}
+                                ellipsizeMode="tail">{status ? formatSubscriptionDateTime(status) : ''}
                                 </Text>
                             </View>
                         </View>
