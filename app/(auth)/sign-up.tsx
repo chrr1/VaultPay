@@ -26,14 +26,14 @@ const C = {
     accent:       '#5B52E8',
     accentText:   '#7B74F0',
     textPrimary:  '#EEEEF5',
-    textSecondary:'#8888AA',
-    textPlaceholder:'#55556A',
+    textSecondary:'#FFFFFF',
+    textPlaceholder:'#FFFFFF',
     socialBg:     '#1C1C27',
     socialBorder: '#2E2E42',
     white:        '#FFFFFF',
-    dividerText:  '#55556A',
+    dividerText:  '#FFFFFF',
     error:        '#FF6B6B',
-    helperText:     '#55556A',
+    helperText:     '#FFFFFF',
 };
 
 const s = StyleSheet.create({
