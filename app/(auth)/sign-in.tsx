@@ -22,7 +22,7 @@ const C = {
     surfaceBorder:'#2A2A3C',
     inputBg:      '#1C1C27',
     inputBorder:  '#FFFFFF',
-    inputFocus:   '#5B52E8',
+    inputFocus:   '#FFFFFF',
     accent:       '#5B52E8',
     accentText:   '#7B74F0',
     textPrimary:  '#EEEEF5',
@@ -33,6 +33,7 @@ const C = {
     white:        '#FFFFFF',
     dividerText:  '#55556A',
     error:        '#FF6B6B',
+    helperText:     '#55556A',
 };
 
 // ─── Styles ───────────────────────────────────────────────────────────────────
@@ -193,6 +194,8 @@ googleIcon: {
         fontSize: 18,
         lineHeight: 22,
     },
+
+     helperText:     { color: C.helperText, fontSize: 12, marginTop: 5, marginLeft: 2 },
 
     // Footer
     footerRow: {
@@ -442,6 +445,9 @@ const SignIn = () => {
                             errors?.fields?.password?.message
                         }
                     />
+                    ) : (
+                                                    <Text style={s.helperText}>Minimum 8 characters required</Text>
+                                                )
 
                     {/* Forgot password */}
                     <View style={s.forgotRow}>
@@ -449,6 +455,7 @@ const SignIn = () => {
                             <Text style={s.forgotText}>Forgot Password?</Text>
                         </TouchableOpacity>
                     </View>
+                    
 
                     {/* Sign In button */}
                     <TouchableOpacity
